@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('pedidos', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_usuarios');
+            $table->string('doc_detalle');
+            $table->float('total_USD');
+            $table->string('Nota')->nullable();
+            $table->timestamps();
+
+
+            $table->foreign('id_usuarios')->references('id')->on('usuarios');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('pedidos');
+    }
+};
