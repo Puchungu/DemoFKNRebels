@@ -1,11 +1,75 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color: #482922;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+/* Start of global styles for register form*/
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form-register {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-register input {
+    padding: 12px 14px;
+    border: 1px solid var(--primary-color);
+    line-height: normal;
+    transition: border-color .1s ease-in-out;
+}
+
+.form-register button {
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.form-register button:hover {
+    background-color: #331f1b;
+}
+
+/* End of global styles for register form*/
+
+/* Start of global styles for login form*/
+    .form-login {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-login input {
+    padding: 12px 14px;
+    border: 1px solid var(--primary-color);
+    line-height: normal;
+    transition: border-color .1s ease-in-out;
+}
+
+.form-login button {
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.form-login button:hover {
+    background-color: #331f1b;
+}
+/* End of global styles for login form*/
