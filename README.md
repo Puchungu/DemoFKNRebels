@@ -34,23 +34,37 @@ Este es un sitio web moderno, minimalista y responsive para una marca de ropa co
 git clone https://github.com/Puchungu/FKN-Rebels.git
 cd FKN-Rebels
 ```
-
-### 2. Instalar dependencias de PHP (Laravel)
+### 2. Crear archivo .env desde .env.example
+```bash
+cp .env.example .env
+```
+### 3. Generar la APP_KEY
+```bash
+php artisan key:generate
+```
+### 4. Configurar base de datos en el archivo .env
+```bash
+DB_DATABASE=nombre_de_tu_base_de_datos
+DB_USERNAME=usuario
+DB_PASSWORD=contraseña
+```
+### 5. Instalar dependencias de PHP (Laravel)
 ```bash
 composer install
 ```
-
-### 3. Instalar dependencias de Node.js (Vite + Tailwind)
+### 6. Instalar dependencias de Node.js (Vite + Tailwind)
 ```bash
 npm install
 ```
-
-### 4. Ejecutar el servidor de desarrollo de Laravel
+### 7. Ejecutar migraciones
+```bash
+php artisan migrate
+```
+### 8. Ejecutar el servidor de desarrollo de Laravel
 ```bash
 php artisan serve
 ```
-
-### 5. Ejecutar Vite para el frontend
+### 9. Ejecutar Vite para el frontend
 ```bash
 npm run dev
 ```
