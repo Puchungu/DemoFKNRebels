@@ -17,6 +17,7 @@
             <input type="" name="password" placeholder="Password">
             <input type="" name="email" placeholder="Email"> 
             <input type="" name="direccion" placeholder="Direccion">
+            <a href="{{ route('login') }}">Already have a account?</a>
             <button type="submit">Register</button>
             <!-- Display validation errors -->
             @if ($errors->any())

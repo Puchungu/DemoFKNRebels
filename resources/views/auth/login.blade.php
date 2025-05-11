@@ -14,6 +14,7 @@
             @csrf
             <input type="email" name="email" value="{{ old('email') }}" placeholder="email">
             <input type="" name="password" placeholder="password">
+            <a href="{{ route('register') }}">Don't have a account?</a>
             <button type="submit">Log in</button>
             <!-- Display validation errors -->
             @if ($errors->any())

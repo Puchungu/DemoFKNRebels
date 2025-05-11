@@ -41,6 +41,10 @@
                     <button>Logout</button>
                 </form>
                 @endauth
+                @guest
+                <button><a href="{{ route('login') }}">Login</a></button>
+                <button><a href="{{ route('register') }}">Register</a></button>
+                @endguest
             </div>
         </div>
 </div>
