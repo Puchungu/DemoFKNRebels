@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable; // Cambiar a Authenticatable
-use Illuminate\Database\Eloquent\Factories\HasFactory; // Opcional, si usas factories
-use Illuminate\Notifications\Notifiable; // Opcional, si usas notificaciones
+use Illuminate\Foundation\Auth\User as Authenticatable; 
+use Illuminate\Database\Eloquent\Factories\HasFactory; 
+use Illuminate\Notifications\Notifiable; 
 
 class UsuariosModel extends Authenticatable
 {
-    use HasFactory, Notifiable; // Opcional, si usas estas características
+    use HasFactory, Notifiable; 
 
     protected $table = 'usuarios';
 

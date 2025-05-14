@@ -17,6 +17,11 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
+    public function showAdmin()
+    {
+        return view('admin.home');
+    }
+
     public function register(Request $request)
     {
         $validated = $request->validate([
@@ -29,7 +34,11 @@ class AuthController extends Controller
         $validated['password'] = Hash::make($validated['password']);
         $user = UsuariosModel::create($validated);
         Auth::login($user);
-        return redirect()->route('home');
+        if ($user->user_type == 'admin') {
+            return redirect()->route('admin.home');
+        }else {
+            return redirect()->route('home');
+        }
     }
 
     public function login(Request $request)
@@ -39,10 +48,14 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        \Log::info('Attempting login with:', $validated);
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            $user = Auth::user();
+            if ($user->user_type == 'admin') {
+                return redirect()->route('admin.home');
+            }else {
+                return redirect()->route('home');
+            }
         }
         throw ValidationException::withMessages([
             'credentials' => 'The provided credentials do not match our records.'
