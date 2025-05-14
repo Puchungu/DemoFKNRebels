@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>FKN REBELS</title>
+    @vite('resources/css/app.css')
 </head>
+
 <body>
     @include('header')
-    @auth
-        <h2> Hi there, {{Auth::user()->username}}</h2>
-    @endauth
+        <div class="home-img">
+            <img src="https://milfshakes.es/cdn/shop/files/MURDER_tee_chico2_front_WEB.jpg?v=1736519076">
+            <h1 class="home-h1-1">Man</h1>
+            <img src="https://milfshakes.es/cdn/shop/files/MURDER_tee_chica_back_4_WEB.jpg?v=1736519076">
+            <h1 class="home-h1-2">Woman</h1>
+        </div>
+    @include('footer')
 </body>
 </html>
