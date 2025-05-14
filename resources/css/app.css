@@ -298,3 +298,34 @@ body{
     }
 }
 /* End of global styles for footer*/
+.container-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto; 
+    gap: 5rem;
+}
+
+.container-admin h1 {
+    font-size: 5rem;
+}
+
+.container-admin button {
+    background-color: #482922;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-adminh1{
+    color: #482922;
+    border-bottom: #482922 solid 2px;
+}
+
+/* Start of global styles for fadmin*/
