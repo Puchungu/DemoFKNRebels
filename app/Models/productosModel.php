@@ -13,6 +13,8 @@ class ProductosModel extends Model
         'categoria',
         'precio',
         'genero',
+        'descripcion',
+        'img',
         'existencias'
     ];
 }
