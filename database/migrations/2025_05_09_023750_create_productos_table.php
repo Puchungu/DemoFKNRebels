@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('nombre_producto');
             $table->string('categoria');
             $table->float('precio');
-            $table->string('genero');
+            $table->string('genero')->nullable();
+            $table->string('descripcion')->nullable();
+            $table->binary('img');
             $table->integer('existencias');
             $table->timestamps();
         });
