@@ -12,7 +12,7 @@
                 <li><a href="#">Woman</a></li>
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">Stores</a></li>
-                <li><a href="{{ route('products') }}">All products</a></li>
+                <li><a href="{{route('home.products')}}">All products</a></li>
             </ul>
         </div>
         <div class="logo-container">

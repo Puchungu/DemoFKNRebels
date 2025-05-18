@@ -11,9 +11,10 @@
 <body>
     <div class="container-admin">
         <h1>Admin Panel</h1>
-        <a href="{{ url('/admin/create') }}"><button>Add New Product</button></a>
-        <a href="{{ url('/admin/allproducts') }}"><button>All products</button></a>
-        <a href="{{ url('') }}"><button>All users</button></a>
+        <a href="{{ route('show.formuser') }}"><button>Add New User</button></a>
+        <a href="{{ route('show.formproducts') }}"><button>Add New Product</button></a>
+        <a href="{{route('admin.showproducts')}}"><button>All products</button></a>
+        <a href="{{route('admin.showusers')}}"><button>All users</button></a>
         @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
