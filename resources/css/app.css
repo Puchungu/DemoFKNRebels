@@ -5,6 +5,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--primary-color);
+    background: #f7f3f1;
 }
 
 /* Start of global styles for register form*/
@@ -55,7 +56,7 @@ body{
 /* End of global styles for register form*/
 
 /* Start of global styles for login form*/
-    .form-login {
+.form-login {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -328,4 +329,268 @@ body{
     border-bottom: #482922 solid 2px;
 }
 
-/* Start of global styles for fadmin*/
+/* Start of global styles for allproducts regular user*/
+
+.hero {
+    padding: 50px;
+    text-align: center;
+       background: #f7f3f1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+/* End of global styles for allproducts regular user*/
+
+/* Start of global styles for tables admin*/
+.buttonadmin{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.button-group form {
+    margin: 0;
+}
+.button-group button{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+th {
+    background-color: #482922; 
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    color: #482922; 
+}
+/*end of global styles for tables admin*/
+
+/* Start of global styles for editproductform admin*/
+.form-editproduct{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+}
+.form-editproduct input {
+    padding: 12px 14px;
+    border: 1px solid var(--primary-color);
+    line-height: normal;
+    transition: border-color .1s ease-in-out;
+}
+.form-editproduct button {
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.form-editproduct button:hover {
+    background-color: #331f1b;
+}
+
+.form-editproduct a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+/* End of global styles for editproductform admin*/
+
+/* Start of global styles for EachProduct admin*/
+.product-page {
+    background: #f7f3f1;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    margin: 3rem auto 2rem auto;
+    padding: 0 2rem;
+}
+
+.product-img img {
+    border-radius: 20px;
+    box-shadow: 0 6px 32px rgba(72, 41, 34, 0.12);
+    object-fit: cover;
+    width: 700px;
+    background: #fff;
+    border: 2px solid #e0d6d0;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.product-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.product-category {
+    font-size: 1rem;
+    color: #a68b7b;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: #482922;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 1.15rem;
+    color: #482922;
+    margin-bottom: 0.5rem;
+}
+
+.product-meta {
+    font-size: 1rem;
+    color: #6d4c41;
+    background: #ede3dd;
+    border-radius: 6px;
+    padding: 0.3rem 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+.btn-buy {
+    margin-top: 1.2rem;
+    padding: 0.8rem 2.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 12px rgba(72, 41, 34, 0.10);
+    letter-spacing: 1px;
+}
+
+.btn-buy:hover {
+    background-color: #331f1b;
+}
+
+@media (max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
+    .product-img img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .product-info {
+        max-width: 100%;
+        min-width: unset;
+        align-items: center;
+        text-align: center;
+    }
+}
