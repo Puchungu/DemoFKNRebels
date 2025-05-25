@@ -53,6 +53,21 @@ body{
     background-color: #331f1b;
 }
 
+.form-register select {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color .1s ease-in-out;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+
 /* End of global styles for register form*/
 
 /* Start of global styles for login form*/
