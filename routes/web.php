@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\cartController;
 
 Route::get('/register',[AuthController::class, 'showRegister'])->name('show.register'); // Show the registration form
 Route::get('/login',[AuthController::class, 'showLogin'])->name('show.login'); // Show the login form
@@ -30,6 +31,11 @@ Route::get('/products/home',[ProductController::class, 'showAllProductshome'])->
 Route::get('/product/{id}',[ProductController::class, 'ShowEachProduct'])->name('show.product'); // Show a single product
 Route::get('/products/man',[ProductController::class, 'ShowProductsMan'])->name('show.manproducts'); // Show product man
 Route::get('/products/woman',[ProductController::class, 'ShowProductsWoman'])->name('show.Womanproducts'); // Show product Woman
+
+Route::post('/cart/add/{id}', [cartController::class, 'addToCart'])->name('cart.add');
+Route::get('/cart', [cartController::class, 'showCart'])->name('cart.show');
+Route::post('/cart/remove/{id}', [cartController::class, 'removeFromCart'])->name('cart.remove');
+Route::post('/cart/checkout', [cartController::class, 'finalizarCompra'])->name('cart.checkout');
 
 Route::get('/', function () {
     return view('home');
