@@ -8,7 +8,7 @@
 <body>
     @include('header')
     <section class="hero">
-    <h1>All Products</h1>
+    <h1>Woman Products</h1>
     <p>Unleash your style. Explore every FKN piece we’ve crafted for rebels like you.</p>
         <div class="product-list">
             @foreach ($productos as $producto)
