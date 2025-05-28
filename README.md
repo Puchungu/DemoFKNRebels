@@ -60,11 +60,16 @@ npm install
 ```bash
 php artisan migrate
 ```
-### 8. Ejecutar el servidor de desarrollo de Laravel
+### 8. Crear el enlace de almacenamiento público (obligatorio para archivos subidos y comprobantes)
+```bash
+php artisan storage:link
+```
+
+### 9. Ejecutar el servidor de desarrollo de Laravel
 ```bash
 php artisan serve
 ```
-### 9. Ejecutar Vite para el frontend
+### 10. Ejecutar Vite para el frontend
 ```bash
 npm run dev
 ```
