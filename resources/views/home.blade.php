@@ -12,9 +12,9 @@
     @include('header')
         <div class="home-img">
             <img src="https://milfshakes.es/cdn/shop/files/MURDER_tee_chico2_front_WEB.jpg?v=1736519076">
-            <h1 class="home-h1-1">Man</h1>
+            <a href="{{route('show.manproducts')}}"><h1 class="home-h1-1">Man</h1></a>
             <img src="https://milfshakes.es/cdn/shop/files/MURDER_tee_chica_back_4_WEB.jpg?v=1736519076">
-            <h1 class="home-h1-2">Woman</h1>
+            <a href="{{route('show.Womanproducts')}}"><h1 class="home-h1-2">Woman</h1></a>
         </div>
     @include('footer')
 </body>

@@ -8,8 +8,8 @@
                 </svg>
             </button>
             <ul class="list-container">
-                <li><a href="#">Man</a></li>
-                <li><a href="#">Woman</a></li>
+                <li><a href="{{route('show.manproducts')}}">Man</a></li>
+                <li><a href="{{route('show.Womanproducts')}}">Woman</a></li>
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">Stores</a></li>
                 <li><a href="{{route('home.products')}}">All products</a></li>
