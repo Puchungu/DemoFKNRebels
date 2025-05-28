@@ -8,6 +8,11 @@
 </head>
 <body class="product-page">
     @include('header')
+    @if(session('success'))
+        <div class="alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="product-container">
         <div class="product-img">
             <img src="data:image/{{ $productos->imgType }};base64,{{ base64_encode($productos->img) }}" alt="Imagen del Producto">
@@ -19,7 +24,11 @@
             <div class="product-description">{{ $productos->descripcion }}</div>
             <div class="product-meta">Género: {{ $productos->genero }}</div>
             <div class="product-meta">Existencias: {{ $productos->existencias }}</div>
-            <button class="btn-buy">Comprar ahora</button>
+            <form action="{{ route('cart.add', $productos->id) }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+                
+            </form>
         </div>
     </div>
     @include('footer')
