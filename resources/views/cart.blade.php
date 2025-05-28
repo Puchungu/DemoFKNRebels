@@ -7,6 +7,17 @@
 </head>
 <body class="cart">
     @include('header')
+    @if(session('success'))
+    <div class="alert alert-success" style="background: #d4edda; color: #155724; padding: 10px 20px; border-radius: 6px; margin: 20px auto; max-width: 400px; text-align: center;">
+        {{ session('success') }}
+        @if(session('comprobante'))
+            <br>
+            <a href="{{ session('comprobante') }}" download style="color: #155724; text-decoration: underline;">
+                Descargar comprobante
+            </a>
+        @endif
+    </div>
+    @endif
     <div class="cart-container">
         <h2>Carrito de Compras</h2>
         @php $total = 0; @endphp

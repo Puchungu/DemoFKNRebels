@@ -26,7 +26,7 @@
             <div class="product-meta">Existencias: {{ $productos->existencias }}</div>
             <form action="{{ route('cart.add', $productos->id) }}" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+                <button type="submit" class="btn btn-buy">Agregar al carrito</button>
                 
             </form>
         </div>

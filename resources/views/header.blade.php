@@ -35,8 +35,8 @@
                 </svg>
             </button>
             <div class="user-dropdown">
-                @auth
                 <a href="{{route('cart.show')}}"><button>Cart</button></a>
+                @auth
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button>Logout</button>

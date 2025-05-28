@@ -51,6 +51,10 @@ class cartController extends Controller
 
     public function finalizarCompra()
     {
+        if (!Auth::check()) {
+            return redirect()->route('show.login')->with('error', 'Por favor, inicia sesión o registrate para realizar la compra.');
+        }
+
         $cart = session('cart');
         if (!$cart || count($cart) == 0) {
             return redirect()->back()->with('error', 'El carrito está vacío.');
@@ -86,7 +90,7 @@ class cartController extends Controller
         ]);
 
         $filename = "pedido_{$pedido->id}.txt";
-        $contenido = "Pedido #{$pedido->id}\nUsuario: " . Auth::user()->name . "\n\nDetalles:\n$detalle\nTotal: $" . number_format($total, 2);
+        $contenido = "Pedido #{$pedido->id}\nUsuario: " . Auth::user()->username . "\n\nDetalles:\n$detalle\nTotal: $" . number_format($total, 2);
         Storage::disk('public')->put("pedidos/{$filename}", $contenido);
 
         $pedido->update(['doc_detalle' => "pedidos/{$filename}"]);
@@ -94,7 +98,10 @@ class cartController extends Controller
         // Limpiar el carrito
         session()->forget('cart');
 
-        return redirect()->route('cart.show')->with('success', '¡Compra finalizada! Puedes descargar tu comprobante.');
+        return redirect()
+        ->route('cart.show')
+        ->with('success', '¡Compra finalizada! Puedes descargar tu comprobante.')
+        ->with('comprobante', asset('storage/' . $pedido->doc_detalle));
     }
 }
 

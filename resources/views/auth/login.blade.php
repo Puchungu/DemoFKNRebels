@@ -8,6 +8,11 @@
 </head>
 <body>
     <div class="form-container">
+        @if(session('error'))
+            <div class="alert alert-danger" style="background: #f8d7da; color: #721c24; padding: 10px 20px; border-radius: 6px; margin: 20px auto; max-width: 400px; text-align: center;">
+                {{ session('error') }}
+            </div>
+        @endif
         <h1>Login</h1>
         <p>Please enter your email and password</p>
         <form class="form-login" action="{{ route('login') }}" method="POST">
