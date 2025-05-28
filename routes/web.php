@@ -10,9 +10,6 @@ Route::get('/login',[AuthController::class, 'showLogin'])->name('show.login'); /
 Route::post('/register',[AuthController::class, 'register'])->name('register');  // Register a new user
 Route::post('/login',[AuthController::class, 'login'])->name('login'); // Login a user
 Route::post('/logout',[AuthController::class, 'logout'])->name('logout'); // Logout a user
-
-
-
 Route::get('/products/create',[ProductController::class, 'ShowFormProducts'])->name('show.formproducts'); //Show the form to create a product
 Route::get('/users/create',[ProductController::class, 'ShowFormUser'])->name('show.formuser'); // Show the form to create a user
 Route::get('/admin/home',[AuthController::class, 'showAdmin'])->name('admin.home'); // Show the admin home page
@@ -26,19 +23,14 @@ Route::put('/products/edit/{id}',[ProductController::class, 'update'])->name('up
 Route::delete('/products/delete/{id}',[ProductController::class, 'delete'])->name('delete.products'); // Delete a product
 Route::delete('/users/delete/{id}',[ProductController::class, 'deleteUser'])->name('delete.user'); // Delete a user
 Route::post('/register/user/admin',[ProductController::class, 'createUser'])->name('admin.register'); // Create a user
-
 Route::get('/products/home',[ProductController::class, 'showAllProductshome'])->name('home.products'); // Show all products in the home page
 Route::get('/product/{id}',[ProductController::class, 'ShowEachProduct'])->name('show.product'); // Show a single product
 Route::get('/products/man',[ProductController::class, 'ShowProductsMan'])->name('show.manproducts'); // Show product man
 Route::get('/products/woman',[ProductController::class, 'ShowProductsWoman'])->name('show.Womanproducts'); // Show product Woman
-
-Route::post('/cart/add/{id}', [cartController::class, 'addToCart'])->name('cart.add');
-Route::get('/cart', [cartController::class, 'showCart'])->name('cart.show');
-Route::post('/cart/remove/{id}', [cartController::class, 'removeFromCart'])->name('cart.remove');
-Route::post('/cart/checkout', [cartController::class, 'finalizarCompra'])->name('cart.checkout');
-
-Route::get('/', function () {
-    return view('home');
-})->name('home');  // Show the home page
+Route::post('/cart/add/{id}', [cartController::class, 'addToCart'])->name('cart.add'); // Add a product to the cart
+Route::get('/cart', [cartController::class, 'showCart'])->name('cart.show'); // Show the cart
+Route::post('/cart/remove/{id}', [cartController::class, 'removeFromCart'])->name('cart.remove'); // Remove a product from the cart
+Route::post('/cart/checkout', [cartController::class, 'finalizarCompra'])->name('cart.checkout'); // Finalize the purchase
+Route::get('/', function () { return view('home');})->name('home');  // Show the home page
 
 
