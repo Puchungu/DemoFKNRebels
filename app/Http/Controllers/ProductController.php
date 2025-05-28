@@ -142,4 +142,14 @@ class ProductController extends Controller
         $productos = ProductosModel::findorFail($id);
         return view('EachProduct', compact('productos'));
     }
+
+    public function ShowProductsMan(){
+        $productos = ProductosModel::where('genero', 'Masculino')->get();
+        return view('Man', compact('productos'));
+    }
+
+    public function ShowProductsWoman(){
+        $productos = ProductosModel::where('genero', 'Femenino')->get();
+        return view('Woman', compact('productos'));
+    }
 }

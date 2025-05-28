@@ -28,6 +28,8 @@ Route::post('/register/user/admin',[ProductController::class, 'createUser'])->na
 
 Route::get('/products/home',[ProductController::class, 'showAllProductshome'])->name('home.products'); // Show all products in the home page
 Route::get('/product/{id}',[ProductController::class, 'ShowEachProduct'])->name('show.product'); // Show a single product
+Route::get('/products/man',[ProductController::class, 'ShowProductsMan'])->name('show.manproducts'); // Show product man
+Route::get('/products/woman',[ProductController::class, 'ShowProductsWoman'])->name('show.Womanproducts'); // Show product Woman
 
 Route::get('/', function () {
     return view('home');
