@@ -785,3 +785,13 @@ td {
     font-size: 10rem;
     letter-spacing: 0.15em;
 }
+
+@media (max-width: 1920px) {
+    .collections-title {
+        font-size: 4rem;
+    }
+    .collectionsContainer img {
+        width: 70%;
+        height: auto;
+    }
+}
