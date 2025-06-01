@@ -766,3 +766,22 @@ td {
     border-bottom: #331f1b solid 2px;
 }
 /* End of global styles for Stores*/
+
+.collectionsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+    justify-content: space-between;
+    
+}
+.collections-title {
+    text-align: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 10rem;
+    letter-spacing: 0.15em;
+}
