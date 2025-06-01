@@ -32,5 +32,6 @@ Route::get('/cart', [cartController::class, 'showCart'])->name('cart.show'); // 
 Route::post('/cart/remove/{id}', [cartController::class, 'removeFromCart'])->name('cart.remove'); // Remove a product from the cart
 Route::post('/cart/checkout', [cartController::class, 'finalizarCompra'])->name('cart.checkout'); // Finalize the purchase
 Route::get('/', function () { return view('home');})->name('home');  // Show the home page
+Route::get('/store', function () { return view('stores');})->name('store'); // Show the store page
 
 
