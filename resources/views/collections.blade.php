@@ -8,7 +8,7 @@
 </head>
 <body>
     @include('header')
-    <h1 class="collections-title">First Japanese Collection</h1>
+    <h1 class="collections-title">Japanese Collection</h1>
     <div class="collectionsContainer">
         <img src="https://i.pinimg.com/736x/75/af/72/75af729ad5a7b1c83c2177e7ba8fd2e2.jpg" alt="Collections" class="collections-image">
         <img src="https://i.pinimg.com/736x/33/da/23/33da230461c9881c1bfd25d3e0d71773.jpg" alt="Collections" class="collections-image">
