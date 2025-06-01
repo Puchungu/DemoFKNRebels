@@ -768,7 +768,7 @@ td {
 
 @media (min-width: 1028px),(min-height: 1080px),(max-width:1920px) {
     .MainStoreImg img {
-        width: 1600px;
+        width: 1200px;
         height: auto;
     }
 }
