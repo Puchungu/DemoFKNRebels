@@ -737,3 +737,32 @@ td {
         .cart-actions .btn:hover {
             background-color: #331f1b;
         }
+/* End of global styles for cart regular user*/
+/* Start of global styles for Stores*/
+.Mainh1{
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.StoreContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.MainStoreImg img{
+    width: 2200px;
+    border-radius: 5rem;
+}
+
+.MainStore {
+    background: #f7f3f1;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.lastp{
+    border-bottom: #331f1b solid 2px;
+}
+/* End of global styles for Stores*/
