@@ -766,7 +766,7 @@ td {
     border-bottom: #331f1b solid 2px;
 }
 
-@media (max-width: 1920px),(max-height: 1080px) {
+@media (min-width: 1028px),(min-height: 1080px),(max-width:1920px) {
     .MainStoreImg img {
         width: 1600px;
         height: auto;
