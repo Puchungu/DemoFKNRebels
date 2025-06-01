@@ -786,7 +786,7 @@ td {
     }
 }
 /* End of global styles for Stores*/
-
+/* Start of global styles for Collections*/
 .collectionsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -825,3 +825,4 @@ td {
         height: auto;
     }
 }
+/* End of global styles for Collections*/
