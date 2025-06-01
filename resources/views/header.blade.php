@@ -10,7 +10,7 @@
             <ul class="list-container">
                 <li><a href="{{route('show.manproducts')}}">Man</a></li>
                 <li><a href="{{route('show.Womanproducts')}}">Woman</a></li>
-                <li><a href="#">Collections</a></li>
+                <li><a href="{{route('collections')}}">Collections</a></li>
                 <li><a href="{{route('store')}}">Stores</a></li>
                 <li><a href="{{route('home.products')}}">All products</a></li>
             </ul>
