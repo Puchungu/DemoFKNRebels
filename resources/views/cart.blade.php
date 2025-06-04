@@ -18,6 +18,11 @@
         @endif
     </div>
     @endif
+    @if(session('error'))
+    <div class="alert alert-danger" style="background: #f8d7da; color: #721c24; padding: 10px 20px; border-radius: 6px; margin: 20px auto; max-width: 400px; text-align: center;">
+        {{ session('error') }}
+    </div>
+    @endif
     <div class="cart-container">
         <h2>Carrito de Compras</h2>
         @php $total = 0; @endphp
@@ -31,7 +36,16 @@
                     <img src="data:image/{{ $item['imgType'] ?? 'jpeg' }};base64,{{ base64_encode($item['img']) }}" alt="Producto">
                     <div class="cart-info">
                         <div><strong>{{ $item['nombre'] }}</strong></div>
-                        <div>Cantidad: {{ $item['cantidad'] }}</div>
+                        <form action="{{ route('cart.update', $id) }}" method="POST" class="auto-submit-form">
+                            @csrf
+                            <input type="number"
+                                name="cantidad"
+                                value="{{ $item['cantidad'] }}"
+                                min="1"
+                                max="{{ \App\Models\ProductosModel::find($id)->existencias }}"
+                                onchange="this.form.submit()"
+                                style="width: 60px;">
+                        </form>
                         <div>Precio: ${{ number_format($item['precio'], 2) }}</div>
                         <div>Subtotal: ${{ number_format($subtotal, 2) }}</div>
                     </div>

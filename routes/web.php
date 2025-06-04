@@ -34,4 +34,5 @@ Route::post('/cart/checkout', [cartController::class, 'finalizarCompra'])->name(
 Route::get('/', function () { return view('home');})->name('home');  // Show the home page
 Route::get('/store', function () { return view('stores');})->name('store'); // Show the store page
 Route::get('/collections', function () { return view('collections');})->name('collections'); // Show the about page
+Route::post('/cart/update/{id}', [cartController::class, 'updateCantidad'])->name('cart.update'); //Update quantity on cart
 

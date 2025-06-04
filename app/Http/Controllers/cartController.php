@@ -31,6 +31,28 @@ class cartController extends Controller
         return redirect()->back()->with('success', 'Producto agregado al carrito');
     }
 
+   public function updateCantidad(Request $request, $id)
+    {
+        $cantidad = (int) $request->input('cantidad');
+        $producto = ProductosModel::findOrFail($id);
+
+        if ($cantidad < 1) {
+            return redirect()->back()->with('error', "La cantidad debe ser al menos 1 para '{$producto->nombre_producto}'.");
+        }
+
+        if ($cantidad > $producto->existencias) {
+            return redirect()->back()->with('error', "Solo hay {$producto->existencias} unidades disponibles de '{$producto->nombre_producto}'.");
+        }
+
+        $cart = session()->get('cart', []);
+        if (isset($cart[$id])) {
+            $cart[$id]['cantidad'] = $cantidad;
+            session()->put('cart', $cart);
+        }
+
+        return redirect()->back()->with('success', "Cantidad de '{$producto->nombre_producto}' actualizada correctamente.");
+    }
+
     public function showCart()
     {
         $cart = session('cart');
@@ -95,7 +117,6 @@ class cartController extends Controller
 
         $pedido->update(['doc_detalle' => "pedidos/{$filename}"]);
 
-        // Limpiar el carrito
         session()->forget('cart');
 
         return redirect()
