@@ -13,10 +13,13 @@
         <form class="form-register" action="{{ route('admin.register') }}" method="POST">
             @csrf
             <input type="" name="username" placeholder="Username">
-            <input type="" name="user_type" placeholder="UserType">
             <input type="" name="password" placeholder="Password">
             <input type="" name="email" placeholder="Email"> 
             <input type="" name="direccion" placeholder="Direccion">
+            <select name='user_type'>
+                <option value="admin">Admin</option>
+                <option value="regular">Regular</option>
+            </select>
             <a href="{{ route('admin.home') }}">Go back to home</a>
             <button type="submit">Register</button>
             <!-- Display validation errors -->

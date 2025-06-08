@@ -14,10 +14,13 @@
             @csrf
             @method('PUT')
             <input type="" name="username" placeholder="Username" value="{{ $user->username }}">
-            <input type="" name="user_type" placeholder="UserType" value="{{ $user->user_type }}">
             <input type="" name="password" placeholder="Password">
             <input type="" name="email" placeholder="Email" value="{{ $user->email }}">
             <input type="" name="direccion" placeholder="Direccion" value="{{ $user->direccion }}">
+            <select name='user_type'>
+                <option value="admin">Admin</option>
+                <option value="regular">Regular</option>
+            </select>
             <a href="{{ route('admin.home') }}">Go back to home</a>
             <button type="submit">Update</button>
             <!-- Display validation errors -->
