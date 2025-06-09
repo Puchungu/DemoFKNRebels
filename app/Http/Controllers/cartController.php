@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\ProductosModel;
 use Illuminate\Http\Request;
@@ -125,5 +124,3 @@ class cartController extends Controller
         ->with('comprobante', asset('storage/' . $pedido->doc_detalle));
     }
 }
-
-
