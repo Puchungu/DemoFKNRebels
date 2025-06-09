@@ -75,7 +75,7 @@ class cartController extends Controller
         if (!Auth::check()) {
             return redirect()->route('show.login')->with('error', 'Por favor, inicia sesión o registrate para realizar la compra.');
         }
-
+        
         $cart = session('cart');
         if (!$cart || count($cart) == 0) {
             return redirect()->back()->with('error', 'El carrito está vacío.');
