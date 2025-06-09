@@ -1,3 +1,9 @@
+### INTEGRANTES
+1.Nelson Oswaldo Avarenga Cuadra<br>
+2.Oscar Rene Palacios Franco<br>
+3.Daniel Josue Joya Majano<br>
+4.Gerson Manases Flores Quinteros<br>
+5.Gerson Ezequiel Pineda Argueta<br>
 # 🧢 FKN REBELS
 
 ¡Bienvenido al proyecto **FKN REBELS**!  
